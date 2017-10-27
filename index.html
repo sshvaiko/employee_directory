@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Startup Employee Directory</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Awesome Startup Employee Directory</h1>
+        <input type="text" name="s" id="search" class="search" placeholder="Search...">
+    </header>
+
+    <div id="employees" class="employees"></div><!-- /.employees -->
+
+</div><!-- /.container-->
+<div id="overlay" class="overlay"></div>
+<div id="popup" class="popup" data-id="">
+    <div class="controls">
+        <a href="#prev" class="prev"> < </a>
+        <a href="#next" class="next"> > </a>
+        <a href="#close" class="close">X</a>
+    </div>
+    <div class="photo">
+        <img src="" class="circle photo">
+    </div>
+    <h2 class="name"></h2>
+    <p class="username"></p>
+    <p class="email"></p>
+    <p class="city"></p>
+    <hr>
+    <p class="phone"></p>
+    <p class="address"></p>
+    <p>Birthday: <span class="birthday"></span></p>
+</div>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

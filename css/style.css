@@ -1,0 +1,192 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+ font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font: 1em/1.5;
+  color: #9FA4A7;
+}
+
+header {
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    color: #404A51;
+    margin: 0;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+p {
+    margin: 0.2em 0;
+}
+
+a {
+  text-decoration: none;
+    color: #9FA4A7
+
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    border-color: #DFDFDF;
+}
+
+input {
+    font-size: 1em;
+    padding: 5px 15px;
+    margin: 10px 0;
+    border-radius: 3px;
+    border: 1px #DFDFDF solid;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.row:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.circle {
+    border-radius: 50%;
+}
+.transition {
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+/* =================================
+  Page Styles
+==================================== */
+.employees .person {
+    border: 1px #DFDFDF solid;
+    border-radius: 5px;
+    padding: 20px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 1%;
+    max-width: 100%;
+}
+.employees .person:hover {
+    background: #404A51;
+    color: #fff;
+}
+.employees .person:hover h2 {
+    color: #fff;
+}
+.employees .person:hover img {
+    -webkit-filter: grayscale(100);
+    filter: grayscale(100);
+}
+.employees .person .content {
+    padding: 0 0 0 10px;
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+
+/* =================================
+  PopUp
+==================================== */
+.overlay {
+    background: RGBA(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+.popup {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    position: fixed;
+    z-index: 2;
+    text-align: center;
+    width: 500px;
+    top: 30%;
+    left: 50%;
+    margin-left: -250px;
+    display: none;
+}
+.popup .controls {
+    font-size: 1.5em;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.popup .controls a {
+    color: #000;
+    display: inline-block;
+    margin: 0 7px;
+}
+.popup p {
+    margin: 15px 0;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+@media (max-width: 1200px) {
+    .employees .person {
+        width: 48%;
+    }
+}
+@media (min-width: 0) and (max-width: 769px) {
+    .employees .person {
+        width: 100%;
+        margin: 0 0 5% 0px;
+    }
+	header {
+		padding: 2em 0;
+	}
+	button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 425px) {
+	header {
+		padding: 1.65em 0;
+	}
+	.col {
+		float: left;
+	}
+	.col + .col {
+		margin-left: 2%;
+	}
+	.col-3 {
+		width: 23%;
+	}
+    .col-9 {
+        width: 69%;
+    }
+}
