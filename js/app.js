@@ -106,7 +106,7 @@
             $name.text(personInfo.name);
             $username.text(personInfo.username);
             $email.text(personInfo.email);
-            $city.text(personInfo.city);
+            $city.text(personInfo.city + ', ' + personInfo.country);
             $phone.text(personInfo.phone);
             $address.text(personInfo.address);
             $birthday.text(personInfo.birthdate);
@@ -129,6 +129,7 @@
                     employees[key] = {};
                     employees[key].name = generateName(value.name);
                     employees[key].city = capitalizeFirstLetter(value.location.city);
+                    employees[key].country = value.nat;
                     employees[key].thumbnail = value.picture.medium;
                     employees[key].photo = value.picture.large;
                     employees[key].email = value.email;
@@ -193,7 +194,7 @@
             let searchString = $(this).val().toLowerCase();
             const $persons = $('.person');
 
-            if(searchString.length > 1) {
+            if(searchString.length > 0) {
                 // disable all
                 $persons.hide();
 
